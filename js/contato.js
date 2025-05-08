@@ -22,7 +22,7 @@ async function  getContato (id){
     return data
 }
 
-async function  postContato (contato){
+export async function  postContato (contato){
     const url = 'https://bakcend-fecaf-render.onrender.com/contatos/'
     const options = {
         method: 'POST',
@@ -57,6 +57,16 @@ async function  putContato (contato, id){
         return response.ok 
 }
 
+// const novoContato = {
+//     "nome": "Letícia Beatriz",
+//     "celular": "11 9 2222-2222",
+//     "foto": "senai.png",
+//     "email": "leticia@gmail.com",
+//     "endereco": "Elton Silva, 904",
+//     "cidade": "Jandira"
+// } 
+
+
 async function deleteContato(id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
     const options= {
@@ -66,11 +76,3 @@ async function deleteContato(id){
         return response.ok 
 }
 
-const novoContato = {
-    "nome": "Letícia Beatriz",
-    "celular": "11 9 2222-2222",
-    "foto": "senai.png",
-    "email": "leticia@gmail.com",
-    "endereco": "Elton Silva, 904",
-    "cidade": "Jandira"
-} 
