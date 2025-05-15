@@ -57,6 +57,17 @@ async function salvarContato(){
 }
 exibirContatos()
 
+const uploadParams = {
+    file: document.getElementById('foto').files[0],
+    storageAccount: 'uploadimageleticia',
+    sasToken: 'sp=racwl&st=2025-05-15T13:38:30Z&se=2025-06-12T21:38:30Z&sv=2024-11-04&sr=c&sig=m8NYo77G2bIJiYRvCSUVo0wguwirjrLN6hxgwAQc4ZQ%3D',
+    containerName: 'fotos',
+};
+
+await uploadImageToAzure(uploadParams)
+
+
+
 document.getElementById('pesquisar')
     .addEventListener('keydown', exibirPesquisa)
 
